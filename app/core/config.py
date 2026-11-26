@@ -7,7 +7,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     # SecretStr masks the value in logs; read it with .get_secret_value().
     github_token: SecretStr
-    github_user_agent: str = "issue-pulse/0.1 (+https://github.com/simon-dutka/issue-pulse)"
+    github_user_agent: str = "issue-pulse/0.1 (+https://github.com/szymon-dutka/issue-pulse)"
     # Overridable so tests can point the client at a fake server.
     github_api_url: str = "https://api.github.com"
     github_min_remaining_requests: int = 20
